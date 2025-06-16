@@ -1,0 +1,51 @@
+<body class="bg-gray-100">
+  <div class="flex items-center justify-center min-h-screen p-6">
+
+    <div class="w-full max-w-sm">
+
+      <div class="p-8 mb-6 bg-white border rounded shadow ">
+
+        <h1 class="mb-6 text-lg font-thin text-gray-900">Register account</h1>
+
+      <form [formGroup]="registerForm" (ngSubmit)="submit()">
+
+          <fieldset class="mb-4">
+            <label class="block mb-2 text-sm text-gray-900">Nom Complet</label>
+            <input formControlName="name" id="name" type="text" class="block w-full px-3 py-2 text-sm bg-white border rounded-sm"
+              name="name" required autofocus>
+          </fieldset>
+
+          <fieldset class="mb-4">
+            <label class="block mb-2 text-sm text-gray-900">Email address</label>
+            <input formControlName="email" id="email" type="email" class="block w-full px-3 py-2 text-sm bg-white border rounded-sm"
+              name="email" required autofocus>
+          </fieldset>
+
+          <fieldset class="mb-4">
+            <div class="flex items-center justify-between w-full">
+              <label for="password" class="block mb-2 text-sm text-gray-900">Password</label>
+              <a class="text-xs font-thin no-underline text-blue hover:underline" href="#">
+                Forgotten password?
+              </a>
+            </div>
+            <input formControlName="password" id="password" type="password" class="block w-full px-3 py-2 text-sm bg-white border rounded-sm"
+              name="password" required>
+          </fieldset>
+
+          <div class="pt-1 pb-5 text-sm font-thin text-gray-darker">
+            <label><input class="mr-1" type="checkbox" name="remember" id="remember"> Remember me</label>
+          </div>
+
+
+          <button type="submit" class="block w-full py-3 text-sm tracking-wide text-white bg-blue-600 rounded-sm">
+            Register
+          </button>
+        </form>
+      </div>
+
+      <p class="text-sm font-thin text-center text-gray-600">Don't have an account yet? <a href="/register"
+          class="text-blue-500 no-underline hover:underline">Login</a></p>
+    </div>
+
+  </div>
+</body>

@@ -1,0 +1,28 @@
+<body class="bg-gray-100">
+  <div class="flex items-center justify-center min-h-screen p-6">
+
+    <div class="w-full max-w-sm">
+
+      <div class="p-8 mb-6 bg-white border rounded shadow ">
+
+        <h1 class="mb-6 text-lg font-thin text-gray-900">Verify OTP</h1>
+
+      <form [formGroup]="otpForm" (ngSubmit)="onSubmit()">
+
+          <fieldset class="mb-4">
+            <label class="block mb-2 text-sm text-gray-900">Code</label>
+            <input formControlName="token" id="token" type="text" class="block w-full px-3 py-2 text-sm bg-white border rounded-sm"
+              name="token" required autofocus>
+          </fieldset>
+          <button type="submit" class="block w-full py-3 text-sm tracking-wide text-white bg-blue-600 rounded-sm">
+            Verifiy
+          </button>
+        </form>
+      </div>
+
+      <p class="text-sm font-thin text-center text-gray-600">Don't have an account yet? <a href="/register"
+          class="text-blue-500 no-underline hover:underline">Register</a></p>
+    </div>
+
+  </div>
+</body>
